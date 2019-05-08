@@ -1,0 +1,20 @@
+body{
+
+
+	background: url(http://www.sympatico.ca/image/policy:1.3288284:1505486734/plage-parfaite-signe-astrologique.jpg?a=16%3A9&$p$a=a918eba&w=800&$w=23745c3) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+}
+
+h1{
+
+	text-align: center;
+	color: #ff33e6;
+	font-family: 'Modak', cursive;
+ 	font-family: 'Black And White Picture', sans-serif;
+	font-size: 60px;
+}

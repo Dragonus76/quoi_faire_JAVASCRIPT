@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Black+And+White+Picture|Modak" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>-->
+
+	<title>Quoi_Faire</title>
+</head>
+<body>
+
+<h1>Quoi Faire Aujourd'huit</h1>
+<div id="divDateJour"></div>
+<div id="divBoiteBtn">
+	<button id="btnQF" type="button">Quoi faire aujourd'huit</button>
+</div>
+<div id="divConseil"></div>
+
+<script type="text/javascript">
+	/*anime.timeline({loop: true})
+  .add({
+    targets: '.ml5 .line',
+    opacity: [0.5,1],
+    scaleX: [0, 1],
+    easing: "easeInOutExpo",
+    duration: 700
+  }).add({
+    targets: '.ml5 .line',
+    duration: 600,
+    easing: "easeOutExpo",
+    translateY: function(e, i, l) {
+      var offset = -0.625 + 0.625*2*i;
+      return offset + "em";
+    }
+  }).add({
+    targets: '.ml5 .ampersand',
+    opacity: [0,1],
+    scaleY: [0.5, 1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5 .letters-left',
+    opacity: [0,1],
+    translateX: ["0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=300'
+  }).add({
+    targets: '.ml5 .letters-right',
+    opacity: [0,1],
+    translateX: ["-0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });*/
+
+var vDateJour = document.getElementById("divDateJour");
+var vBtnQF = document.getElementById("btnQF");
+
+
+// Auditeur de bouton 
+vBtnQF.addEventListener("click", afficherConseil);
+
+//Crée un objet Date
+var d = new Date();
+
+afficherDate();
+
+function afficherDate(){
+	vDateJour.innerHTML = d.toDateString();
+}
+ function afficherConseil() {
+    // Récupérer numéro du jour de la semaine
+    var numJourSem = d.getDay();
+
+ 
+	var monConseil;
+
+	switch(numJourSem){
+		case 0:
+		monConseil = "Un peu de repos bien mérité.";
+		break;
+
+		case 1:
+		monConseil = "Fais ce que tu as faire voyons";
+		break;
+
+		case 2:
+		monConseil = "Bute de toi sur le code";
+		break;
+
+		case 3:
+		monConseil = "Dire a Anna et Ines que je les Aimes !";
+		break;
+
+		case 4:
+		monConseil = "J'aime la programmation execute un programme";
+
+		break;
+
+		case 5:
+		monConseil = "il faut que je bosse le node.js";
+		break;
+
+		case 6:
+		monConseil = "Fais une des choses de ta liste ";
+		break;
+
+		default:
+		monConseil = "Vive le Javascript !";
+		break;
+
+
+
+	}
+	//Aficher la valeur de monConseil dans divConseil
+	document.getElementById("divConseil").innerHTML = monConseil; 
+
+}
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
